@@ -1,2 +1,3 @@
 ﻿using Exercise;
-Method.Initials();
+Method.HighLow();
+Method.CutFirst2("Michael");

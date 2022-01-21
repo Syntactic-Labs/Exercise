@@ -8,30 +8,21 @@ namespace Exercise
 {
     internal class Method
     {
-        public static void Initials()
+        public static void HighLow()
         {
-            Console.WriteLine("What is your first name?: ");
-            var FirstName = Console.ReadLine();
-            if (FirstName == null)
-            {
-                Console.WriteLine("Please give your first name!");
-                FirstName = Console.ReadLine();
-            }
-            var FirstInitial = FirstName?.Substring(0, 1);
-            Console.WriteLine("What is your last name?: ");
-            var LastName = Console.ReadLine();
-            if (LastName ==  null)
-            {
-                Console.WriteLine("Please give your last name!");
-                LastName = Console.ReadLine();
-            }
-            var LastInitial = LastName?.Substring(0, 1);
-            var Initials = FirstInitial + LastInitial;
-            Console.WriteLine($"Your initials are... {Initials}");
+            List<int> num = new List<int>();
+            num.Add(15);
+            num.Add(22);
+            num.Add(46);
+            var max = num.Max();
+            var min = num.Min();
+            Console.WriteLine($"The max number is {max}");
+            Console.WriteLine($"The min number is {min}");
         }
-        public static string CutFirst2(string a)
+        public static void CutFirst2(string a)
         {
-           return a.Substring(0, 2);
+           var b = a.Substring(0, 2);
+            Console.WriteLine(b);
         }
     }
 }
