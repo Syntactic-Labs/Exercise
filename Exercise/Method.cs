@@ -8,21 +8,14 @@ namespace Exercise
 {
     internal class Method
     {
-        public static void HighLow()
+        public static void StringCounter()
         {
-            List<int> num = new List<int>();
-            num.Add(15);
-            num.Add(22);
-            num.Add(46);
-            var max = num.Max();
-            var min = num.Min();
-            Console.WriteLine($"The max number is {max}");
-            Console.WriteLine($"The min number is {min}");
+            Console.Write("Input a string (contains at least one 'w' char) : ");
+            string str = Console.ReadLine();
+            var count = str.Count(s => s == 'w');
+            Console.WriteLine("Test the string contains 'w' character  between 1 and 3 times: ");
+            Console.WriteLine(count >= 1 && count <= 3);
         }
-        public static void CutFirst2(string a)
-        {
-           var b = a.Substring(0, 2);
-            Console.WriteLine(b);
-        }
+        
     }
 }
