@@ -1,21 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Exercise
 {
     internal class Method
     {
-        public static void StringCounter()
+
+        public static int AsoluteDiffOrTrip(int n)
         {
-            Console.Write("Input a string (contains at least one 'w' char) : ");
-            string str = Console.ReadLine();
-            var count = str.Count(s => s == 'w');
-            Console.WriteLine("Test the string contains 'w' character  between 1 and 3 times: ");
-            Console.WriteLine(count >= 1 && count <= 3);
+            const int x = 51;
+
+            if (n > x)
+            {
+                return (n - x) * 3;
+            }
+            return x - n;
         }
-        
+        public static int EqTripleNotDouble(int x, int y)
+        {
+            return x == y ? (x + y) * 3 : x + y;
+        }
+        public static bool IntCheck(int x, int y)
+        {
+            if (x == 30 || y == 30 || x + y == 30)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static string IsThereAnIf(string ifCheck)
+        {
+            if (!ifCheck.StartsWith("if "))
+            {
+                const string? isIf = "if ";
+                string newIf = isIf + ifCheck;
+                return newIf;
+            }
+            return ifCheck;
+        }
+
     }
 }
